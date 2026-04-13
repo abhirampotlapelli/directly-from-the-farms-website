@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshHarvest Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Fresh<span>Harvest</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Shop</a></li>
+      <li><a href="farmer.html">Sell Produce</a></li>
+    </ul>
+    <div class="cart-icon">
+      <a href="cart.html">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+        <span id="cart-count">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Fresh from Farm to Your Table</h1>
+      <p>Discover the finest selection of organic fruits and vegetables harvested locally.</p>
+      <a href="#products" class="btn btn-primary">Shop Now</a>
+    </div>
+  </header>
+
+  <section class="season-highlights container">
+    <div class="section-header">
+      <h2>Season Highlights</h2>
+      <p>Enjoy the best seasonal picks: juicy mangoes and refreshing watermelon, delivered fresh from local farms.</p>
+    </div>
+    <div class="highlight-grid">
+      <article class="highlight-card" onclick="scrollToProduct('Mango')">
+        <img src="https://res.cloudinary.com/dw7zzc2qy/image/upload/v1775573713/mangos_c0jlt4.jpg" alt="Mango season" class="highlight-img">
+        <div class="highlight-card-content">
+          <span class="highlight-badge">Mango</span>
+          <h3>King of Summer</h3>
+          <p>Sweet, ripe mangoes bursting with flavor — perfect for smoothies, salads, and summer desserts.</p>
+        </div>
+      </article>
+      <article class="highlight-card" onclick="scrollToProduct('Watermelon')">
+        <img src="https://res.cloudinary.com/dw7zzc2qy/image/upload/v1775583377/water_melon2_ivc4mg.jpg" alt="Watermelon season" class="highlight-img">
+        <div class="highlight-card-content">
+          <span class="highlight-badge">Watermelon</span>
+          <h3>Refreshing Pick</h3>
+          <p>Crisp, juicy watermelon to keep you cool and hydrated during the warm days ahead.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Fruits Section -->
+  <main id="products" class="container">
+    <div class="section-header">
+      <h2>Fresh Fruits</h2>
+    </div>
+    <div class="product-grid" id="fruit-list" style="margin-bottom: 5rem;">
+      <!-- Fruits injected via JS -->
+    </div>
+
+    <!-- Vegetables Section -->
+    <div class="section-header">
+      <h2>Fresh Vegetables</h2>
+    </div>
+    <div class="product-grid" id="vegetable-list">
+      <!-- Vegetables injected via JS -->
+    </div>
+
+    <!-- Dry Fruits Section -->
+    <div class="section-header">
+      <h2>Dry Fruits</h2>
+    </div>
+    <div class="product-grid" id="dryfruit-list">
+      <!-- Dry Fruits injected via JS -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 FreshHarvest Marketplace. Supporting Local Farmers.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

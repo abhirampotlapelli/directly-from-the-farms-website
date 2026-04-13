@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Portal | FreshHarvest</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Fresh<span>Harvest</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Shop</a></li>
+      <li><a href="farmer.html" class="active">Sell Produce</a></li>
+    </ul>
+    <div class="cart-icon">
+      <a href="cart.html">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+        <span id="cart-count">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="form-wrapper">
+      <h2>List Your Produce</h2>
+      <p>Add your fresh fruits and vegetables to the marketplace.</p>
+      
+      <form id="add-product-form">
+        <div class="form-group">
+          <label for="productName">Product Name</label>
+          <input type="text" id="productName" required placeholder="e.g. Organic Tomatoes">
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="productCategory">Category</label>
+            <select id="productCategory" required>
+              <option value="fruit">Fruit</option>
+              <option value="vegetable">Vegetable</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="productPrice">Price (₹ per kg)</label>
+            <input type="number" id="productPrice" step="0.01" required placeholder="2.99">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="productImage">Image URL</label>
+          <input type="url" id="productImage" required placeholder="https://example.com/image.jpg">
+          <small>Need an image? Use a direct link or Unsplash photo link.</small>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-block">Add to Marketplace</button>
+      </form>
+      <div id="form-success" class="hidden alert alert-success">Product successfully added! View it on the shop page.</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 FreshHarvest Marketplace. Supporting Local Farmers.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
